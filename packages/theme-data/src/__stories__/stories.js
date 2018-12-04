@@ -69,6 +69,11 @@ export default [
     readme: densityReadme
   },
   {
+    description: "Component - Avatar",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^avatar./),
+    readme: undefined
+  },
+  {
     description: "Component - Checkbox",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^checkbox./),
     readme: undefined
