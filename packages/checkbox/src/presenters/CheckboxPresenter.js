@@ -21,10 +21,6 @@ export default class CheckboxPresenter extends Component {
      */
     indeterminate: PropTypes.bool,
     /**
-     * Text identifying the field
-     */
-    label: PropTypes.string,
-    /**
      * The name of the checkbox as submitted with a form
      */
     name: PropTypes.string,
@@ -70,14 +66,11 @@ export default class CheckboxPresenter extends Component {
     }
   };
 
-  id = generateId("checkbox");
-
   render() {
     const {
       checked,
       disabled,
       indeterminate,
-      label,
       name,
       onBlur,
       onChange,
@@ -86,8 +79,6 @@ export default class CheckboxPresenter extends Component {
       required,
       value
     } = this.props;
-
-    const labelClasses = cx(["hig__checkbox__label"]);
 
     const wrapperClasses = cx([
       "hig__checkbox",
@@ -98,12 +89,9 @@ export default class CheckboxPresenter extends Component {
       }
     ]);
 
-    const { id } = this;
-
     return (
       <div className={wrapperClasses}>
         <input
-          id={id}
           checked={checked}
           className="hig__checkbox__input"
           disabled={disabled}
@@ -121,9 +109,7 @@ export default class CheckboxPresenter extends Component {
           disabled={disabled}
           indeterminate={indeterminate}
         />
-        <label htmlFor={id} className={labelClasses}>
-          {label}
-        </label>
+
       </div>
     );
   }

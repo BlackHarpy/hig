@@ -23,10 +23,6 @@ export default class Checkbox extends Component {
      */
     indeterminate: PropTypes.bool,
     /**
-     * Text identifying the field
-     */
-    label: PropTypes.string,
-    /**
      * The name of the checkbox as submitted with a form
      */
     name: PropTypes.string,
@@ -62,7 +58,6 @@ export default class Checkbox extends Component {
       defaultChecked,
       disabled,
       indeterminate,
-      label,
       name,
       onBlur,
       onChange,
@@ -84,7 +79,6 @@ export default class Checkbox extends Component {
             checked={checked}
             disabled={disabled}
             indeterminate={indeterminate}
-            label={label}
             name={name}
             onBlur={onBlur}
             onChange={handleChange}
