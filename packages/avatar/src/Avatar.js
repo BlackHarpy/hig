@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import { polyfill } from "react-lifecycles-compat";
 import { ThemeContext } from "@hig/theme-context";
 import { sizes, AVAILABLE_SIZES } from "./sizes";
@@ -41,6 +41,9 @@ function initialsFromName(name) {
  * @param {Object} props
  * @param {string} props.image
  * @param {string} props.name
+ * @param {string} props.size
+ * @param {Object} props.resolvedRoles
+ * @param {Function} props.onError
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
@@ -49,9 +52,9 @@ function Image({ image, name, size, onError, resolvedRoles }) {
   const styles = stylesheet({ size }, resolvedRoles);
 
   return (
-    <span className={cx(css(styles.avatar.imageWrapper))}>
+    <span className={css(styles.avatar.imageWrapper)}>
       <img
-        className={cx(css(styles.avatar.image))}
+        className={css(styles.avatar.image)}
         src={image}
         alt={alt}
         onError={onError}
@@ -62,7 +65,9 @@ function Image({ image, name, size, onError, resolvedRoles }) {
 
 /**
  * @param {Object} props
- * @param {Object} props.name
+ * @param {string} props.name
+ * @param {string} props.size
+ * @param {Object} props.resolvedRoles
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
@@ -70,7 +75,7 @@ function Initials({ size, name, resolvedRoles }) {
   const styles = stylesheet({ size }, resolvedRoles);
 
   return (
-    <span className={cx(css(styles.avatar.initials))} aria-hidden="true">
+    <span className={css(styles.avatar.initials)} aria-hidden="true">
       {initialsFromName(name)}
     </span>
   );
@@ -158,7 +163,7 @@ class Avatar extends Component {
         {({ resolvedRoles }) => (
           <span
             aria-label={label}
-            className={cx(css(styles(resolvedRoles).avatar.container))}
+            className={css(styles(resolvedRoles).avatar.container)}
             role="img"
           >
             {!showImage ? null : (

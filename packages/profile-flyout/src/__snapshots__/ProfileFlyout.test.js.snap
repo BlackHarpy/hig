@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
+.emotion-1 {
+  background-color: #6ac0e7;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
@@ -14,12 +37,12 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
     >
       <span
         aria-label="Avatar for Anonymous User"
-        className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+        className="emotion-1"
         role="img"
       >
         <span
           aria-hidden="true"
-          className="hig__avatarV2__initials"
+          className="emotion-0"
         >
           AU
         </span>
@@ -78,6 +101,29 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 `;
 
 exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
+.emotion-1 {
+  background-color: #6ac0e7;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
 >
@@ -91,12 +137,12 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
     >
       <span
         aria-label="Avatar for Anonymous User"
-        className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+        className="emotion-1"
         role="img"
       >
         <span
           aria-hidden="true"
-          className="hig__avatarV2__initials"
+          className="emotion-0"
         >
           AU
         </span>
